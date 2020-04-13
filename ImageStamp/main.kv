@@ -1,0 +1,134 @@
+<CreateAccountWindow>:
+    name: "create"
+
+    id: id
+    namee: namee
+    age: age
+    gen: gen
+    cr: cr
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Add Face Record"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "ID : "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: id
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "NAME : "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "AGE : "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: age
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*3}
+                text: "GENDER : "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*3}
+                size_hint: 0.4, 0.12
+                id: gen
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*4}
+                text: "CRIMINAL RECORD : "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*4}
+                size_hint: 0.4, 0.12
+                id: cr
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+        Button:
+            pos_hint:{"x":0, "top":0.8-0.13*5}
+            size_hint: 0.5, 0.12
+            font_size: (root.width**2 + root.height**2) / 14**4
+            text: "SUBMIT"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+        Button:
+            pos_hint:{"x":0.5, "top":0.8-0.13*5}
+            size_hint: 0.4, 0.12
+            text: "BACK"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.back()
+
+
+<MainScreen>:
+    name: "main"
+
+    FloatLayout:
+        cols:1
+
+        Button:
+            pos_hint:{"x":0.2,"top":0.8-0.13*1}
+            size_hint: 0.6, 0.15
+            text: "Add Face"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.addFace()
+        Button:
+            pos_hint:{"x":0.2,"top":0.8-0.13*2}
+            size_hint: 0.6, 0.15
+            text: "Process Face"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.processFace()
+        Button:
+            pos_hint:{"x":0.2,"top":0.8-0.13*3}
+            size_hint: 0.6, 0.15
+            text: "Face Detect"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.detectFace()
