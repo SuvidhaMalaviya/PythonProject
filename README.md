@@ -14,7 +14,7 @@ In this first you have to add information for this click on add face and fill th
 
 <h3><b>Video Tutorial</b></h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ydlmGr7nvyA" ></iframe>
+[![Watch the video](https://lh3.googleusercontent.com/-8QihhO1-LuU/XqPfqk7grsI/AAAAAAAAELQ/Q58XgwkwyAA1BoafpRJlU90Ewcckv199wCLcBGAsYHQ/s1600/1587797927682455-0.png)](https://www.youtube.com/watch?v=ydlmGr7nvyA)
 
 </body>
 </html>
